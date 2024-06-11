@@ -1,6 +1,7 @@
 @extends('layouts.vertical', ['title' => 'Validation', 'sub_title' => 'Forms', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 @section('content')
+{{-- {{ dd($demo) }} --}}
 <div class="flex flex-col gap-6">
 	<div class="card">
 		<div class="card-header">

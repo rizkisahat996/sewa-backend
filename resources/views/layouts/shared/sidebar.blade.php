@@ -1,7 +1,7 @@
 <div class="app-menu">
 
     <!-- Sidenav Brand Logo -->
-    <a href="{{ route('any', 'index') }}" class="logo-box">
+    <a href="/" class="logo-box">
         <!-- Light Brand Logo -->
         <div class="logo-light">
             <img src="/images/logo-light.png" class="logo-lg h-6" alt="Light logo">
@@ -27,7 +27,7 @@
             <li class="menu-title">Menu</li>
 
             <li class="menu-item">
-                <a href="{{ route('any', 'index') }}" class="menu-link">
+                <a href="/" class="menu-link">
                     <span class="menu-icon"><i class="mgc_home_3_line"></i></span>
                     <span class="menu-text"> Dashboard </span>
                 </a>
@@ -35,21 +35,82 @@
 
             <li class="menu-title">Apps</li>
 
-            <li class="menu-item">
+            {{-- <li class="menu-item">
                 <a href="{{ route('second', ['apps', 'calendar']) }}" class="menu-link">
                     <span class="menu-icon"><i class="mgc_calendar_line"></i></span>
                     <span class="menu-text"> Calendar </span>
                 </a>
-            </li>
+            </li> --}}
 
             <li class="menu-item">
-                <a href="{{ route('second', ['apps', 'tickets']) }}" class="menu-link">
+                <a href="{{ route('buildings.index') }}" class="menu-link">
                     <span class="menu-icon"><i class="mgc_coupon_line"></i></span>
-                    <span class="menu-text"> Tickets </span>
+                    <span class="menu-text"> Building </span>
                 </a>
             </li>
-
             <li class="menu-item">
+                <a href="{{ route('transactions.index') }}" class="menu-link">
+                    <span class="menu-icon"><i class="mgc_coupon_line"></i></span>
+                    <span class="menu-text"> Transaction </span>
+                </a>
+            </li>
+            {{-- <li class="menu-item">
+                <a href="javascript:void(0)" data-fc-type="collapse" class="menu-link">
+                    <span class="menu-icon"><i class="mgc_file_check_line"></i></span>
+                    <span class="menu-text"> Forms </span>
+                    <span class="menu-arrow"></span>
+                </a>
+
+                <ul class="sub-menu hidden">
+                    <li class="menu-item">
+                        <a href="{{ route('second', ['forms', 'elements']) }}" class="menu-link">
+                            <span class="menu-text">Form Elements</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('second', ['forms', 'select']) }}" class="menu-link">
+                            <span class="menu-text">Select</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('second', ['forms', 'range']) }}" class="menu-link">
+                            <span class="menu-text">Range</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('second', ['forms', 'pickers']) }}" class="menu-link">
+                            <span class="menu-text">Pickers</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('second', ['forms', 'masks']) }}" class="menu-link">
+                            <span class="menu-text">Masks</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('second', ['forms', 'editor']) }}" class="menu-link">
+                            <span class="menu-text">Editor</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('second', ['forms', 'file-uploads']) }}" class="menu-link">
+                            <span class="menu-text">File Uploads</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('second', ['forms', 'validation']) }}" class="menu-link">
+                            <span class="menu-text">Validation</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('second', ['forms', 'layout']) }}" class="menu-link">
+                            <span class="menu-text">Form Layout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li> --}}
+
+            {{-- <li class="menu-item">
                 <a href="{{ route('second', ['apps', 'file-manager']) }}" class="menu-link">
                     <span class="menu-icon"><i class="mgc_folder_2_line"></i></span>
                     <span class="menu-text"> File Manager </span>
@@ -87,9 +148,9 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
 
-            <li class="menu-title">Custom</li>
+            {{-- <li class="menu-title">Custom</li>
 
             <li class="menu-item">
                 <a href="javascript:void(0)" data-fc-type="collapse" class="menu-link">
@@ -120,9 +181,9 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
 
-            <li class="menu-item">
+            {{-- <li class="menu-item">
                 <a href="javascript:void(0)" data-fc-type="collapse" class="menu-link">
                     <span class="menu-icon"><i class="mgc_box_3_line"></i></span>
                     <span class="menu-text"> Extra Pages </span>
@@ -186,9 +247,9 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
 
-            <li class="menu-item">
+            {{-- <li class="menu-item">
                 <a href="javascript:void(0)" data-fc-type="collapse" class="menu-link">
                     <span class="menu-icon"><i class="mgc_layout_line"></i></span>
                     <span class="menu-text"> Layout </span>
@@ -222,9 +283,9 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
 
-            <li class="menu-title">Elements</li>
+            {{-- <li class="menu-title">Elements</li>
 
             <li class="menu-item">
                 <a href="javascript:void(0)" data-fc-type="collapse" class="menu-link">
@@ -403,61 +464,6 @@
                 </ul>
             </li>
 
-            <li class="menu-item">
-                <a href="javascript:void(0)" data-fc-type="collapse" class="menu-link">
-                    <span class="menu-icon"><i class="mgc_file_check_line"></i></span>
-                    <span class="menu-text"> Forms </span>
-                    <span class="menu-arrow"></span>
-                </a>
-
-                <ul class="sub-menu hidden">
-                    <li class="menu-item">
-                        <a href="{{ route('second', ['forms', 'elements']) }}" class="menu-link">
-                            <span class="menu-text">Form Elements</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="{{ route('second', ['forms', 'select']) }}" class="menu-link">
-                            <span class="menu-text">Select</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="{{ route('second', ['forms', 'range']) }}" class="menu-link">
-                            <span class="menu-text">Range</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="{{ route('second', ['forms', 'pickers']) }}" class="menu-link">
-                            <span class="menu-text">Pickers</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="{{ route('second', ['forms', 'masks']) }}" class="menu-link">
-                            <span class="menu-text">Masks</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="{{ route('second', ['forms', 'editor']) }}" class="menu-link">
-                            <span class="menu-text">Editor</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="{{ route('second', ['forms', 'file-uploads']) }}" class="menu-link">
-                            <span class="menu-text">File Uploads</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="{{ route('second', ['forms', 'validation']) }}" class="menu-link">
-                            <span class="menu-text">Validation</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="{{ route('second', ['forms', 'layout']) }}" class="menu-link">
-                            <span class="menu-text">Form Layout</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
 
             <li class="menu-item">
                 <a href="javascript:void(0)" data-fc-type="collapse" class="menu-link">
@@ -528,10 +534,10 @@
                     </li>
                 </ul>
             </li>
-        </ul>
+        </ul> --}}
 
-        <!-- Help Box Widget -->
-        <div class="my-10 mx-5">
+            <!-- Help Box Widget -->
+            {{-- <div class="my-10 mx-5">
             <div class="help-box p-6 bg-black/5 text-center rounded-md">
                 <div class="flex justify-center mb-4">
                     <svg width="30" height="18" aria-hidden="true">
@@ -543,7 +549,7 @@
                 <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
                 <a href="javascript: void(0);" class="btn btn-sm bg-secondary text-white">Upgrade</a>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 <!-- Sidenav Menu End  -->
