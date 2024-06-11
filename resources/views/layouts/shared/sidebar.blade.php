@@ -54,6 +54,12 @@
                     <span class="menu-text"> Transaction </span>
                 </a>
             </li>
+            <li class="menu-item">
+                <a href="{{ route('invoices.index') }}" class="menu-link">
+                    <span class="menu-icon"><i class="mgc_coupon_line"></i></span>
+                    <span class="menu-text"> Invoices </span>
+                </a>
+            </li>
             {{-- <li class="menu-item">
                 <a href="javascript:void(0)" data-fc-type="collapse" class="menu-link">
                     <span class="menu-icon"><i class="mgc_file_check_line"></i></span>

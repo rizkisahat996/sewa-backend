@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BuildingsController;
+use App\Http\Controllers\InvoicesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\TransactionsController;
@@ -29,5 +30,6 @@ require __DIR__ . '/auth.php';
 Route::get('/', fn()=>view('index'))->name('home');
 Route::resource('buildings', BuildingsController::class);
 Route::resource('transactions', TransactionsController::class);
+Route::resource('invoices', InvoicesController::class);
 // Route::resource('buildings', 'BuildingsController');
 // Route::resource('transactions', 'TransactionsController');

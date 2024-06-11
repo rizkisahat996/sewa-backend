@@ -4,29 +4,31 @@ namespace App\Http\Controllers;
 
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use App\Models\Building;
+use App\Models\User;
 
 class TransactionsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $transactions = Transaction::with('building', 'renter', 'invoices')->get();
-        return view('transactions.index', compact('transactions'));
+        $mode = $request->query('mode');
+        $demo = $request->query('demo');
+        $transactions = Transaction::with('building', 'renter')->get();
+        return view('transactions.index', compact('transactions'), ['mode' => $mode, 'demo' => $demo]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
-        return view('transactions.create');
+        $buildings = Building::all();
+        $renters = User::all();
+
+        return view('transactions.create', compact('buildings', 'renters'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -47,20 +49,18 @@ class TransactionsController extends Controller
      */
     public function show(Transaction $transaction)
     {
-        return view('transactions.show', compact('transaction'));
+        $buildings = Building::all();
+        $renters = User::all();
+        return view('transactions.show', compact('transaction', 'buildings', 'renters'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Transaction $transaction)
     {
-        return view('transactions.edit', compact('transaction'));
+        $buildings = Building::all();
+        $renters = User::all();
+        return view('transactions.edit', compact('transaction', 'buildings', 'renters'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Transaction $transaction)
     {
         $validatedData = $request->validate([
@@ -75,6 +75,7 @@ class TransactionsController extends Controller
 
         return redirect()->route('transactions.show', $transaction->id)->with('success', 'Transaction updated successfully.');
     }
+
 
     /**
      * Remove the specified resource from storage.
