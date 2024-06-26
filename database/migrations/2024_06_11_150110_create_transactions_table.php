@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('building_id');
+            $table->string('building_id');
             $table->unsignedBigInteger('renter_id');
             $table->dateTime('start_date');
             $table->dateTime('end_date');

@@ -28,11 +28,11 @@ class DatabaseSeeder extends Seeder
         //     'remember_token' => Str::random(10),
         // ]);
 
-        User::factory()->count(10)->create();
-        BuildingCategory::factory()->count(3)->create();
+        // User::factory()->count(10)->create();
+        // BuildingCategory::create(['name' => 'Event']);
+        // BuildingCategory::create(['name' => 'Building']);
         Building::factory()->count(20)->create();
-        Transaction::factory()->count(20)->create();
-        Invoice::factory()->count(20)->create();
-
+        // Transaction::factory()->count(20)->create();
+        // Invoice::factory()->count(20)->create();
     }
 }

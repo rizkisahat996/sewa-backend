@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\BuildingsController as APIBuildingsController;
 use App\Http\Controllers\BuildingsController;
 use App\Http\Controllers\InvoicesController;
 use Illuminate\Support\Facades\Route;
@@ -27,9 +28,10 @@ require __DIR__ . '/auth.php';
 //     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
 // });
 
-Route::get('/', fn()=>view('index'))->name('home');
+Route::get('/', fn () => view('index'))->name('home');
 Route::resource('buildings', BuildingsController::class);
 Route::resource('transactions', TransactionsController::class);
 Route::resource('invoices', InvoicesController::class);
 // Route::resource('buildings', 'BuildingsController');
 // Route::resource('transactions', 'TransactionsController');
+
