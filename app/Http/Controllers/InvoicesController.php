@@ -59,7 +59,6 @@ class InvoicesController extends Controller
     {
         $request->validate([
             'transaction_id' => 'required|exists:transactions,id',
-            'amount' => 'required|numeric',
             'status' => 'required|string',
         ]);
 

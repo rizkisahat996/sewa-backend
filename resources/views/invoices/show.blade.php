@@ -137,7 +137,13 @@
             <div class="flex gap-2 items-center print:hidden">
                 <a href="javascript:window.print()" class="btn bg-primary text-white"><i
                         class="mgc_print_line text-lg me-1"></i> Print</a>
-                <a href="#" class="btn bg-info text-white">Submit</a>
+                <form action="{{ route('invoices.update', $invoice->id) }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" name="transaction_id" value="{{ $invoice->transaction_id }}">
+                    <input type="hidden" name="status" value="paid">
+                    <button type="submit" class="btn bg-info text-white">Submit</button>
+                </form>
             </div>
         </div>
     </div>
